@@ -1,0 +1,8 @@
+import pandas as pd
+filename = ".big-mac-full-index.csv"
+df = pd.read_csv(filename)
+
+query = f"(iso_a3 == 'MEX' )"
+mxn_df = df.query(query)
+
+print(mxn_df.median())
